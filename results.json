@@ -1,0 +1,29 @@
+[
+  {
+    "document_type": "professional_indemnity_insurance_certificate",
+    "document_type_confidence": 99,
+    "document_type_reasoning": "The document is explicitly titled 'CERTIFICATE OF PROFESSIONAL INDEMNITY INSURANCE' and contains policy number, insured name, insurer, coverage limit, and period of insurance, which clearly identifies it as an insurance certificate.",
+    "file_name": "160-Hardings-insurance-certificate.pdf",
+    "file_type": "application/pdf",
+    "contractor_id": null,
+    "issued_date": "2025-02-07",
+    "expiry_date": "2026-01-31",
+    "coverage_limit": 1000000.0,
+    "coverage_currency": "GBP",
+    "insurer": "HCC International Insurance Company PLC",
+    "policy_number": "PI25P651075",
+    "insured_name": "Individual members of The Guild of Property Professionals",
+    "extracted_fields": {
+      "member": "Hardings Estate Agency Limited",
+      "business_activities": "Estate Agency, Lettings Agency and Property Management",
+      "address": "11 High Street, Windsor, Berks, SL4 1LD",
+      "policy_excess": "GBP 1,000 each and every claim (does not apply to defence costs)",
+      "period_of_insurance": "2025-02-01 to 2026-01-31",
+      "signatory_name": "Oliver Wharmby",
+      "signed_for": "MINT",
+      "certificate_note": "This certificate is provided as information only and does not form part of the contract of insurance."
+    },
+    "extraction_confidence": 98,
+    "notes": "Coverage limit includes defence costs in addition and notes an aggregate defence costs limit of GBP 10,000,000 for all members. The certificate states the insurance applies only while the holder remains a subscribing member of The Guild of Property Professionals."
+  }
+]
