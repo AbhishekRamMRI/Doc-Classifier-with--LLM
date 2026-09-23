@@ -28,16 +28,6 @@ python cli.py upload file1.pdf file2.pdf --contractor-id CN-4821 --output result
 A browser UI is also available: upload one or more PDFs and click **Classify**
 to run the same pipeline as the CLI and see the results in the page.
 
-### Quickest way to run it
-
-```bash
-./run.sh
-```
-
-This starts the FastAPI backend (http://127.0.0.1:8001) and the Vite dev
-server (http://localhost:5173) together, installing frontend dependencies on
-first run. Press `Ctrl+C` to stop both.
-
 ### Running the two servers manually
 
 **1. Start the API backend** (from the project root, with the venv set up as above):
