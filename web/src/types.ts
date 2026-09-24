@@ -12,6 +12,14 @@ export interface DocumentResult {
   insurer: string | null
   policy_number: string | null
   insured_name: string | null
+  address: string | null
+  invoice_number: string | null
+  invoice_date: string | null
+  invoice_due_date: string | null
+  invoice_from: string | null
+  invoice_to: string | null
+  total_amount: number | null
+  total_amount_currency: string | null
   extracted_fields: Record<string, unknown> | null
   extraction_confidence: number
   notes: string | null

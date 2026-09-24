@@ -28,6 +28,14 @@ class DocumentResult(BaseModel):
     insurer: str | None = None
     policy_number: str | None = None
     insured_name: str | None = None
+    address: str | None = None
+    invoice_number: str | None = None
+    invoice_date: str | None = None
+    invoice_due_date: str | None = None
+    invoice_from: str | None = None
+    invoice_to: str | None = None
+    total_amount: float | None = None
+    total_amount_currency: str | None = None
     extracted_fields: dict | None = None
     extraction_confidence: int = Field(ge=0, le=100)
     notes: str | None = None

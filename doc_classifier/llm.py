@@ -21,9 +21,19 @@ SYSTEM_PROMPT = """You are a document intelligence engine for a business documen
      resumes, bank statements, unclear/garbled content, etc.). When in doubt, use "other".
 
 2. If -- and only if -- the document_type is "professional_indemnity_insurance" or
-   "public_liability", ALSO extract the insurance-specific fields below. For "invoice" or
-   "other", leave insurance-specific fields null and instead extract whatever general
-   identifying fields are relevant into "extracted_fields" (freeform key-value pairs).
+   "public_liability", ALSO extract these insurance-specific fields: issued_date (policy
+   start date), expiry_date (policy end date), coverage_limit, coverage_currency, insurer,
+   policy_number, insured_name, address (the insured party's address). Leave the
+   invoice-specific fields (see below) null.
+
+   If -- and only if -- the document_type is "invoice", ALSO extract these invoice-specific
+   fields: invoice_number, invoice_date, invoice_due_date, invoice_from (issuer name/company),
+   invoice_to (recipient name/company), total_amount, total_amount_currency. Leave the
+   insurance-specific fields null.
+
+   For "other", leave both insurance- and invoice-specific fields null and instead extract
+   whatever general identifying fields are relevant into "extracted_fields" (freeform
+   key-value pairs).
 
 3. SCORE your confidence (0-100 integer) for the document type classification.
 
@@ -45,6 +55,14 @@ OUTPUT SCHEMA:
   "insurer": string | null,
   "policy_number": string | null,
   "insured_name": string | null,
+  "address": string | null,
+  "invoice_number": string | null,
+  "invoice_date": string | null,
+  "invoice_due_date": string | null,
+  "invoice_from": string | null,
+  "invoice_to": string | null,
+  "total_amount": number | null,
+  "total_amount_currency": string | null,
   "extracted_fields": object | null,
   "extraction_confidence": integer,
   "notes": string | null
